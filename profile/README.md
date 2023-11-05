@@ -15,7 +15,7 @@
 * Site Internet : https://ai-cfia.github.io/ai-cfia-ia-acia.github.io/
 * Courriel : cfia.ai-ia.acia@inspection.gc.ca
 * Documentation des développeurs : https://github.com/ai-cfia/dev-rel-docs
-* 
+
 ## Produits en développement
 
 * Finesse : recherche interne intelligente
