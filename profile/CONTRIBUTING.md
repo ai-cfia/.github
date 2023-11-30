@@ -136,6 +136,20 @@ For more detailed information and specific steps, please refer to the GitHub
 documentation or reach out to your team for any additional guidelines or
 conventions.
 
+## Editor settings
+
+Ensure that your editor (preferably in project workspaces) has the following
+turned on:
+
+* Automatically wrap lines to 80 characters in Markdown files
+  * use Rewrap extension
+* Trim Final Newlines: Ensures your files end neatly with a single newline.
+* Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of
+  lines upon file save.
+* Insert Final Newline: Add EOF new line when saving
+
+[see this repository .vscode/settings.json as example](/.vscode/settings.json)
+
 ## Development processes
 
 * check your [Github organization](https://github.com/ai-cfia)
@@ -163,17 +177,3 @@ conventions.
   by a reviewer that would require a lot more work outside the scope of the
   current issue, it is encouraged to create a new issue capturing that
   non-trivial piece of work and document it as "postponed work" in the PR.
-
-## Editor settings
-
-Ensure that your editor (preferably in project workspaces) has the following
-turned on:
-
-* Automatically wrap lines to 80 characters in Markdown files
-  * use Rewrap extension
-* Trim Final Newlines: Ensures your files end neatly with a single newline.
-* Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of
-  lines upon file save.
-* Insert Final Newline: Add EOF new line when saving
-
-[see this repository .vscode/settings.json as example](/.vscode/settings.json)
