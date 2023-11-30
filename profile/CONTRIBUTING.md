@@ -2,7 +2,9 @@
 
 ## What this is
 
-This guide provides an overview of the GitHub workflow using GitHub issues, GitHub projects, GitHub pull requests, reviews, and closing issues from pull requests.
+This guide provides an overview of the GitHub workflow using GitHub issues,
+GitHub projects, GitHub pull requests, reviews, and closing issues from pull
+requests.
 
 ## Examples
 
@@ -11,7 +13,8 @@ This documentation uses product codename Louis as the example.
 ## Using GitHub Issues
 
 1. Go to the organization's GitHub repository.
-2. Click on **Projects** and select **Louis** to see all issues within the Louis project.
+2. Click on **Projects** and select **Louis** to see all issues within the Louis
+   project.
 3. Create a new issue and assign it to a specific developer. Make sure to:
    - give the issue meaningful title and description
    - assign it the appropriate labels
@@ -20,33 +23,48 @@ This documentation uses product codename Louis as the example.
 ## Working with GitHub Projects
 
 1. Open the organization's GitHub repository.
-2. Click on **Projects** and select a project. For instance **Louis** to view the Louis project board.
-3. **Issue Prioritization**: The tasks can be reordered in the table by dragging their priority number up or down. The higher up a task is, the more urgent it is.
+2. Click on **Projects** and select a project. For instance **Louis** to view
+   the Louis project board.
+3. **Issue Prioritization**: The tasks can be reordered in the table by dragging
+   their priority number up or down. The higher up a task is, the more urgent it
+   is.
 4. **Assignment**: In the `Assignees` column, chose an assignee.
-5. **Status**: In the `status` column, update the progress on the issue to keep track of it.
+5. **Status**: In the `status` column, update the progress on the issue to keep
+   track of it.
 
 **Notes**:
-- If the particular repository on which you are working doesn't have a GitHub Project, create one with the permission of your supervisor. Follow this [guide](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects).
-- Don't assign issues before they are prioritized (by your supervisor or the whole team)
+- If the particular repository on which you are working doesn't have a GitHub
+  Project, create one with the permission of your supervisor. Follow this
+  [guide](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects).
+- Don't assign issues before they are prioritized (by your supervisor or the
+  whole team)
 
 ## Creating a new repository in the Organization
 
 1. In the Organization's page, select `New` in the `Repositories` section.
-2. Give it a meaningful name, making sure to follow the existent repositories naming patterns (i.e., lowercase, dash instead of underscore, …)
+2. Give it a meaningful name, making sure to follow the existent repositories
+   naming patterns (i.e., lowercase, dash instead of underscore, …)
 3. Give it a meaningful description.
 4. Make it Public.
 5. Include README and .gitignore files.
-6. Once created, protect the main branch: check options `Require a pull request before merging` and `Require approvals`.
+6. Once created, protect the main branch: check options `Require a pull request
+   before merging` and `Require approvals`.
 
 ## Creating a GitHub Pull Request
 
-Push and share your code early and often. When you share early code still under development, prefix your PR with WIP (meaning Work-in-Progress) so that reviewers know this is not your final version.
+Push and share your code early and often. When you share early code still under
+development, prefix your PR with WIP (meaning Work-in-Progress) so that
+reviewers know this is not your final version.
 
-1. Complete the task assigned in the issue and push the changes to a new branch. Make sure to name the branch after the issue (i.e., `issue123-meaningful-tag`). Make sure your commit names refer to the issue (`issue #<issue-number>: meaningful short description`).
+1. Complete the task assigned in the issue and push the changes to a new branch.
+   Make sure to name the branch after the issue (i.e.,
+   `issue123-meaningful-tag`). Make sure your commit names refer to the issue
+   (`issue #<issue-number>: meaningful short description`).
 1. Go to the repository and click on the **Pull requests** tab.
 1. Click on **New pull request**.
 1. Provide a descriptive title and detailed description of the changes made.
-1. Within the description, include a numbered tag correlated to the issue number (e.g., `issue123-keywords`).
+1. Within the description, include a numbered tag correlated to the issue number
+   (e.g., `issue123-keywords`).
 
 ## Making Changes to a Pull Request (PR)
 1. Mark your pull request as a draft.
@@ -58,9 +76,13 @@ Push and share your code early and often. When you share early code still under 
 
 ## Reviewing and Approving a Pull Request (PR)
 
-1. Team members review the pull request, leave comments, and suggest changes if necessary.
-2. Developer addresses the feedback and makes the necessary updates. Developer replies to all review comments with "done", comments, new issues (to postpone work to future PR) or clarifying questions
-3. Once the pull request meets the required criteria, a team member approves the pull request.
+1. Team members review the pull request, leave comments, and suggest changes if
+   necessary.
+2. Developer addresses the feedback and makes the necessary updates. Developer
+   replies to all review comments with "done", comments, new issues (to postpone
+   work to future PR) or clarifying questions
+3. Once the pull request meets the required criteria, a team member approves the
+   pull request.
 
 ## filing an issue/ticket
 
@@ -77,54 +99,76 @@ A good issue:
 A great issues will also
 
 * provide links and (sequence) diagrams to further explain the work to be done
-* provide version, environment tested against and reproduction steps for issues filed
+* provide version, environment tested against and reproduction steps for issues
+  filed
 * for webapps, pull up the Developer tools panel of your browser and use it
 * text, screenshots, application logs, console logs
 * describe root causes of the problem
 
 Issues should also be the right-size.
 
-Stay away from refactoring or small fixes that can be additional tasks to existing issues.
+Stay away from refactoring or small fixes that can be additional tasks to
+existing issues.
 
-When the issue is created to follow up on a comment in another issue or pull request, don't forget to use the "Reference in new issue" Github feature (found in the ... menu) to provide better context.
+When the issue is created to follow up on a comment in another issue or pull
+request, don't forget to use the "Reference in new issue" Github feature (found
+in the ... menu) to provide better context.
 
 ## Closing Pull Requests
 
-1. Once the pull request is approved, navigate to the pull request's description.
-1. Update the description by adding the text `Closes #<issue number>` to indicate that the issue has been addressed and completed.
+1. Once the pull request is approved, navigate to the pull request's
+   description.
+1. Update the description by adding the text `Closes #<issue number>` to
+   indicate that the issue has been addressed and completed.
 1. Consider rebasing and squashing the commit history
 1. Merge the pull request into the main branch.
 1. Don't delete the branch when done (leave them for future reference).
 
-Following this workflow will help in managing tasks, tracking progress, and closing issues effectively using GitHub's features.
+Following this workflow will help in managing tasks, tracking progress, and
+closing issues effectively using GitHub's features.
 
-For more detailed information and specific steps, please refer to the GitHub documentation or reach out to your team for any additional guidelines or conventions.
+For more detailed information and specific steps, please refer to the GitHub
+documentation or reach out to your team for any additional guidelines or
+conventions.
 
 ## Development processes
 
-* check your [Github organization](https://github.com/ai-cfia) [notifications](https://github.com/notifications) twice daily.
-  * Customize email routing to route ai-cfia repo notifications to your inspection.gc.ca
+* check your [Github organization](https://github.com/ai-cfia)
+  [notifications](https://github.com/notifications) twice daily.
+  * Customize email routing to route ai-cfia repo notifications to your
+    inspection.gc.ca
   * Prioritize pull requests reviews above all else
   * Do not just rubber stamp; provide value as a reviewer
 * every work item should have a matching issue describing the work to be done
 * pull requests
-  * branch -> pull request -> peer review -> fixes -> approval -> rebase and merge
+  * branch -> pull request -> peer review -> fixes -> approval -> rebase and
+    merge
   * name branch prefix with issue identifier (```issue59-some-issue-summary```)
   * reference the issue within the description of the pull request
-  * do as many request reviews -> get comments from reviewer -> fix and answer comments -> request reviews as necessary (until you get the reviewer(s) approval
-* update your [Github notification settings with Custom Routing](https://github.com/settings/notifications/custom_routing) from the ai-cfia org to your inspection.gc.ca email
+  * do as many request reviews -> get comments from reviewer -> fix and answer
+    comments -> request reviews as necessary (until you get the reviewer(s)
+    approval
+* update your [Github notification settings with Custom
+  Routing](https://github.com/settings/notifications/custom_routing) from the
+  ai-cfia org to your inspection.gc.ca email
 * single line commits preferably prefixed with issues being worked on or fixed
   * example: `Fixes #19: Introduction Jolan Thomassin`
 * don't delete branches when done (leave them for future reference)
-* when feedback, suggestions or feature request that come up in one of your PR by a reviewer that would require a lot more work outside the scope of the current issue, it is encouraged to create a new issue capturing that non-trivial piece of work and document it as "postponed work" in the PR.
+* when feedback, suggestions or feature request that come up in one of your PR
+  by a reviewer that would require a lot more work outside the scope of the
+  current issue, it is encouraged to create a new issue capturing that
+  non-trivial piece of work and document it as "postponed work" in the PR.
 
 ## Editor settings
 
-Ensure that your editor (preferably in project workspaces) has the following turned on:
+Ensure that your editor (preferably in project workspaces) has the following
+turned on:
 
 * Automatically wrap lines to 80 characters in Markdown files
+  * use Rewrap extension
 * Trim Final Newlines: Ensures your files end neatly with a single newline.
-* Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of lines upon file save.
+* Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of
+  lines upon file save.
 * Insert Final Newline: Add EOF new line when saving
 
 [see this repository .vscode/settings.json as example](/.vscode/settings.json)
