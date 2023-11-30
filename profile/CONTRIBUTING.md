@@ -50,42 +50,7 @@ This documentation uses product codename Louis as the example.
 6. Once created, protect the main branch: check options `Require a pull request
    before merging` and `Require approvals`.
 
-## Creating a GitHub Pull Request
-
-Push and share your code early and often. When you share early code still under
-development, prefix your PR with WIP (meaning Work-in-Progress) so that
-reviewers know this is not your final version.
-
-1. Complete the task assigned in the issue and push the changes to a new branch.
-   Make sure to name the branch after the issue (i.e.,
-   `issue123-meaningful-tag`). Make sure your commit names refer to the issue
-   (`issue #<issue-number>: meaningful short description`).
-1. Go to the repository and click on the **Pull requests** tab.
-1. Click on **New pull request**.
-1. Provide a descriptive title and detailed description of the changes made.
-1. Within the description, include a numbered tag correlated to the issue number
-   (e.g., `issue123-keywords`).
-
-## Making Changes to a Pull Request (PR)
-1. Mark your pull request as a draft.
-![Screenshot_59.png](/.attachments/Screenshot_59-8fb3dd7c-dc99-4c2f-8dc1-02dfef9f503b.png)
- 2. Make all the necessary changes you want.
-3. Once you addressed all the requests, you can ask for a re-review.
-![Screenshot_61.png](/.attachments/Screenshot_61-7794e4a4-30af-421c-a70a-306ef0b58b99.png)
-
-
-## Reviewing and Approving a Pull Request (PR)
-
-1. Team members review the pull request, leave comments, and suggest changes if
-   necessary.
-2. Developer addresses the feedback and makes the necessary updates. Developer
-   replies to all review comments with "done", comments, new issues (to postpone
-   work to future PR) or clarifying questions
-3. Once the pull request meets the required criteria, a team member approves the
-   pull request.
-
 ## filing an issue/ticket
-
 
 A good issue:
 
@@ -94,7 +59,6 @@ A good issue:
 * step-by-step details of the work to be done
 * acceptance criteria
 * a task list and are correctly associated to a project
-
 
 A great issues will also
 
@@ -113,6 +77,47 @@ existing issues.
 When the issue is created to follow up on a comment in another issue or pull
 request, don't forget to use the "Reference in new issue" Github feature (found
 in the ... menu) to provide better context.
+
+## Creating a Pull Request
+
+1. Reference which issue this PR closes in the description
+1. Plan the work required to complete the change as a checklist
+  1. Make it work first!
+  1. Refactoring
+  1. documentation of usage and architecture
+  1. manual testing (updatest to TESTING.md)
+  1. automated testing
+  1. versioning bump (_versions.ts in frontend projects)
+1. Mark your pull request as a draft.
+![Screenshot_59.png](/.attachments/Screenshot_59-8fb3dd7c-dc99-4c2f-8dc1-02dfef9f503b.png)
+ 2. Make all the necessary changes you want.
+3. Once you addressed all the requests, you can ask for a re-review.
+![Screenshot_61.png](/.attachments/Screenshot_61-7794e4a4-30af-421c-a70a-306ef0b58b99.png)
+
+## Working on a pull request
+
+Push and share your code early and often. When you share early code still under
+development, prefix your PR with WIP (meaning Work-in-Progress) so that
+reviewers know this is not your final version.
+
+## Submit for review
+
+Select list of reviewers that are relevant to the PR, including team lead.
+
+You should also include relevant reviewers even if they are absent or on
+vacation so they can catch up when they come back. Their approval is not
+required in the meantime to complete the PR.
+
+## Reviewing and Approving a Pull Request (PR)
+
+1. Team members review the pull request, leave comments, and suggest changes if
+   necessary.
+2. Developer addresses the feedback and makes the necessary updates. Developer
+   replies to all review comments with "done", comments, new issues (to postpone
+   work to future PR) or clarifying questions
+3. Once the pull request meets the required criteria, a team member approves the
+   pull request.
+
 
 ## Closing Pull Requests
 
