@@ -167,6 +167,9 @@ turned on:
   * do as many request reviews -> get comments from reviewer -> fix and answer
     comments -> request reviews as necessary (until you get the reviewer(s)
     approval
+  * Handling divergent branches -> To maintain a clean and linear project
+    history, we recommend using the rebase approach for integrating changes
+    from the main branch into your branches.
 * update your [Github notification settings with Custom
   Routing](https://github.com/settings/notifications/custom_routing) from the
   ai-cfia org to your inspection.gc.ca email
