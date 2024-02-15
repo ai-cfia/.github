@@ -162,7 +162,7 @@ turned on:
 * pull requests
   * branch -> pull request -> peer review -> fixes -> approval -> rebase and
     merge
-  * name branch prefix with issue identifier (```issue59-some-issue-summary```)
+  * name branch prefix with issue identifier (```59-some-issue-summary```)
   * reference the issue within the description of the pull request
   * do as many request reviews -> get comments from reviewer -> fix and answer
     comments -> request reviews as necessary (until you get the reviewer(s)
