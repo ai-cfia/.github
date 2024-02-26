@@ -55,29 +55,24 @@ This documentation uses product codename Louis as the example.
 
 A good issue:
 
-- good, descriptive title (preferably something understandable from management)
-- full summary with context
-- step-by-step details of the work to be done
-- acceptance criteria
-- a task list and are correctly associated to a project
+- A good, descriptive title that is understandable even to management.
+- A full summary that provides context.
+- Detailed, step-by-step descriptions of the work to be done.
+- Clearly defined acceptance criteria.
+- A task list that is correctly associated with a project.
+- The inclusion of links and (sequence) diagrams to further clarify the work.
+- Information about the version and environment tested against, along with
+  reproduction steps for filed issues.
+- For web applications, utilization of the Developer tools panel in the browser.
+- The use of text, screenshots, application logs, and console logs to convey
+  information.
+- An explanation of the root causes of the problem.
 
-A great issues will also
-
-- provide links and (sequence) diagrams to further explain the work to be done
-- provide version, environment tested against and reproduction steps for issues
-  filed
-- for webapps, pull up the Developer tools panel of your browser and use it
-- text, screenshots, application logs, console logs
-- describe root causes of the problem
-
-Issues should also be the right-size.
-
-Stay away from refactoring or small fixes that can be additional tasks to
-existing issues.
-
-When the issue is created to follow up on a comment in another issue or pull
-request, don't forget to use the "Reference in new issue" Github feature (found
-in the ... menu) to provide better context.
+Additionally, issues should be appropriately sized, avoiding refactoring or
+minor fixes that could be added as tasks to existing issues. When creating an
+issue as a follow-up to a comment in another issue or pull request, utilize the
+"Reference in new issue" GitHub feature (found in the ... menu) to provide
+context and enhance clarity.
 
 ## Creating a Pull Request
 
@@ -90,10 +85,13 @@ in the ... menu) to provide better context.
     5. automated testing
     6. versioning bump (_versions.ts in frontend projects)
 3. Mark your pull request as a draft.
-![Screenshot_59.png](/.attachments/Screenshot_59-8fb3dd7c-dc99-4c2f-8dc1-02dfef9f503b.png)
-    1. Make all the necessary changes you want.
-4. Once you addressed all the requests, you can ask for a re-review.
-![Screenshot_61.png](/.attachments/Screenshot_61-7794e4a4-30af-421c-a70a-306ef0b58b99.png)
+
+![Draft](../img/draft-pr.png)
+
+4. Make all the necessary changes you want.
+5. Once you addressed all the requests, you can ask for a re-review.
+
+![Re-review](../img/re-review.png)
 
 ## Working on a pull request
 
@@ -165,7 +163,7 @@ turned on:
 - pull requests
   - branch -> pull request -> peer review -> fixes -> approval -> rebase and
     merge
-  - name branch prefix with issue identifier (```issue59-some-issue-summary```)
+  - name branch prefix with issue identifier (```59-some-issue-summary```)
   - reference the issue within the description of the pull request
   - do as many request reviews -> get comments from reviewer -> fix and answer
     comments -> request reviews as necessary (until you get the reviewer(s)
@@ -189,21 +187,21 @@ branch onto the main branch. This keeps the project history clean and linear.
 
 ```ascii
 main      A---B---C---D
-                       \
-branch             E---F---G (divergent)
+               \
+branch          E---F---G (divergent)
 ```
 
 A, B, C, D are commits on the main branch, and E, F, G are your commits on the branch. C and D are new commits added to the main branch after you created your branch.
 
 Steps to manually Rebase and Merge
 
-1. Fetch Latest main branch:
+1.Fetch Latest main branch:
 
 ```sh
 git fetch origin main
 ```
 
-2. Rebase Your Branch:
+2.Rebase Your Branch:
 
 Start the rebase process to replay your branch's changes (E, F, G) on top of the
 current state of the main branch (D).
@@ -212,9 +210,9 @@ current state of the main branch (D).
 git rebase origin/main
 ```
 
-3. Resolve Conflicts (if any):
+3.Resolve Conflicts (if any):
 
-```ah
+```sh
 git add <file>
 git rebase --continue
 ```
@@ -233,8 +231,8 @@ This process ensures your changes maintains a linear history :
 
 ```ascii
 main      A---B---C---D
-                                     \
-branch                            E'---F'---G' (rebased)
+                        \
+branch                   E'---F'---G' (rebased)
 ```
 
 #### Configuring Git for Automatic Rebase
@@ -244,3 +242,5 @@ To set up Git to automatically rebase instead of creating merge commits when doi
 ```sh
 git config --global pull.rebase true
 ```
+
+#### Rebase with VScode GitHub extension
