@@ -171,8 +171,8 @@ turned on:
 - update your [Github notification settings with Custom
   Routing](https://github.com/settings/notifications/custom_routing) from the
   ai-cfia org to your inspection.gc.ca email
-- single line commits preferably prefixed with issues being worked on or fixed
-  - example: `Fixes #19: Introduction Jolan Thomassin`
+- single line commits preferably prefixed with issues being worked on.
+  - example: `Issue #19: Introduction Jolan Thomassin`
 - don't delete branches when done (leave them for future reference)
 - when feedback, suggestions or feature request that come up in one of your PR
   by a reviewer that would require a lot more work outside the scope of the
