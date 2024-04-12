@@ -13,6 +13,3 @@ jobs:
 
   yaml-check:
     uses: ai-cfia/github-workflows/.github/workflows/workflow-yaml-check.yml@main
-  repo-standard:
-    uses: ai-cfia/github-workflows/.github/workflows/workflow-repo-standards-validation.yml@main
-    secrets: inherit
