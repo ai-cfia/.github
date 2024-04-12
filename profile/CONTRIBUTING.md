@@ -149,7 +149,7 @@ turned on:
   lines upon file save.
 - Insert Final Newline: Add EOF new line when saving
 
-[see this repository .vscode/settings.json as example](.vscode/settings.json)
+[see this repository .vscode/settings.json as example](../.vscode/settings.json)
 
 ## Development processes
 
@@ -247,3 +247,8 @@ git config --global pull.rebase true
 ```
 
 #### Rebase with VScode GitHub extension
+
+1. Open the command palette (Ctrl+Shift+P)
+2. Search for "Rebase" and select "Git: Pull (Rebase)"
+3. Select the branch you want to rebase onto the main branch
+4. Resolve any conflicts and push your changes
