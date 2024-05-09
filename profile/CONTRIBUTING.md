@@ -86,7 +86,7 @@ context and enhance clarity.
     6. versioning bump (_versions.ts in frontend projects)
 3. Mark your pull request as a draft.
 
-![Draft](../img/draft-pr.png)
+    ![Draft](../img/draft-pr.png)
 
 4. Make all the necessary changes you want.
 5. Once you addressed all the requests, you can ask for a re-review.
@@ -149,7 +149,7 @@ turned on:
   lines upon file save.
 - Insert Final Newline: Add EOF new line when saving
 
-[see this repository .vscode/settings.json as example](/.vscode/settings.json)
+[see this repository .vscode/settings.json as example](../.vscode/settings.json)
 
 ## Development processes
 
@@ -169,7 +169,7 @@ turned on:
     comments -> request reviews as necessary (until you get the reviewer(s)
     approval
 - update your [Github notification settings with Custom
-  Routing](https://github.com/settings/notifications/custom_routing) from the
+  Routing](<https://github.com/settings/notifications/custom_routing>) from the
   ai-cfia org to your inspection.gc.ca email
 - single line commits preferably prefixed with issues being worked on or fixed
   - example: `Fixes #19: Introduction Jolan Thomassin`
@@ -191,7 +191,9 @@ main      A---B---C---D
 branch          E---F---G (divergent)
 ```
 
-A, B, C, D are commits on the main branch, and E, F, G are your commits on the branch. C and D are new commits added to the main branch after you created your branch.
+A, B, C, D are commits on the main branch, and E, F, G are your commits on the
+branch. C and D are new commits added to the main branch after you created your
+branch.
 
 Steps to manually Rebase and Merge
 
@@ -237,10 +239,16 @@ branch                   E'---F'---G' (rebased)
 
 #### Configuring Git for Automatic Rebase
 
-To set up Git to automatically rebase instead of creating merge commits when doing a git pull, you can use the following global configuration command:
+To set up Git to automatically rebase instead of creating merge commits when
+doing a git pull, you can use the following global configuration command:
 
 ```sh
 git config --global pull.rebase true
 ```
 
 #### Rebase with VScode GitHub extension
+
+1. Open the command palette (Ctrl+Shift+P)
+2. Search for "Rebase" and select "Git: Pull (Rebase)"
+3. Select the branch you want to rebase onto the main branch
+4. Resolve any conflicts and push your changes
