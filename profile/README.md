@@ -61,7 +61,7 @@ operational and regulatory excellence in service to Canadians.
 ## Produits en développement
 
 * Finesse : recherche interne intelligente
-* Nachet : vision par ordinateur appliquée aux images numériques issues du
+* Nachet : vision par ordinateur appliquée aux images numériques issues d'un
   microscope
 * FertiScan : vise à simplifier le processus de saisie et d'organisation des
   informations sur les étiquettes d'engrais en utilisant l'IA
