@@ -37,9 +37,8 @@ operational and regulatory excellence in service to Canadians.
   1. Align with Organization Initiatives and Mandates
   2. Leverage existing structures and capabilities
   3. Augment business processes and decision-making capabilities
-  4. AI to augment human performance
-  5. Enhance and develop new product offering
-  6. AI where appropriate and use responsibly
+  4. Enhance and develop new product offering
+  5. AI where appropriate and use responsibly
 
 ### Responsible AI Principles
 
@@ -96,9 +95,8 @@ opérationnelle et réglementaire au service des Canadiens.
   1. Aligner avec les initiatives et mandats de l'organisation
   2. Tirer parti des structures et capacités existantes
   3. Augmenter les processus métier et les capacités de prise de décision
-  4. L'IA pour augmenter les performances humaines
-  5. Améliorer et développer de nouvelles offres de produits
-  6. Utiliser l'IA là où c'est approprié et de manière responsable
+  4. Améliorer et développer de nouvelles offres de produits
+  5. Utiliser l'IA là où c'est approprié et de manière responsable
 
 ### Principes de l'IA responsable
 
