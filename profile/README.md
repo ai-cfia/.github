@@ -1,4 +1,4 @@
-# Canadian Food Inspection Agency Artificial intelligence lab
+# Canadian Food Inspection Agency Artificial Intelligence Laboratory
 
 * Website: <https://ailab.inspection.alpha.canada.ca>
 * Email: <cfia.ai-ia.acia@inspection.gc.ca>
@@ -51,7 +51,7 @@ operational and regulatory excellence in service to Canadians.
 
 ---
 
-# Laboratoire d'intelligence artificielle de l'Agence Canadienne d'Inspection des Aliments
+# Laboratoire d'intelligence artificielle de l'Agence canadienne d'inspection des aliments
 
 * Site Internet : <https://ailab.inspection.alpha.canada.ca/fr>
 * Courriel : <cfia.ai-ia.acia@inspection.gc.ca>
