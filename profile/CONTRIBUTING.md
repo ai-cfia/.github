@@ -6,37 +6,52 @@
   - [Editor settings](#editor-settings)
 - [Using GitHub Issues](#using-github-issues)
 - [Working with GitHub Projects](#working-with-github-projects)
-- [Creating a new repository in the Organization](#creating-a-new-repository-in-the-organization)
+- [Creating a new repository in the
+  Organization](#creating-a-new-repository-in-the-organization)
 - [Filing an Issue/ticket](#filing-an-issueticket)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Working on a Pull Request](#working-on-a-pull-request)
 - [Submit for review](#submit-for-review)
-- [Reviewing and Approving a Pull Request (PR)](#reviewing-and-approving-a-pull-request-pr)
+- [Reviewing and Approving a Pull Request
+  (PR)](#reviewing-and-approving-a-pull-request-pr)
 - [Closing Pull Requests](#closing-pull-requests)
 - [GitHub development processes](#github-development-processes)
   - [Handling divergent branches](#handling-divergent-branches)
-    - [Configuring Git for Automatic Rebase](#configuring-git-for-automatic-rebase)
-    - [Rebase with VScode GitHub extension](#rebase-with-vscode-github-extension)
+    - [Configuring Git for Automatic
+      Rebase](#configuring-git-for-automatic-rebase)
+    - [Rebase with VScode GitHub
+      extension](#rebase-with-vscode-github-extension)
 
 
 ## Overview
 
-This guide details the CFIA AI Lab’s development practices and GitHub workflow, covering Issues, Projects, Pull Requests, and code reviews to ensure efficient, collaborative, and high-quality development.
+This guide details the CFIA AI Lab’s development practices and GitHub workflow,
+covering Issues, Projects, Pull Requests, and code reviews to ensure efficient,
+collaborative, and high-quality development.
 
 ## Development Practices
 
 ### Managing Secrets
-**⚠️Warning: Never add secrets directly in your code.** Even if it's for quick testing, secrets in code can easily be committed accidentally.
 
-To securely manage sensitive information, we use `.env` files for environment-specific configuration and `.envtemplate` files as templates for these configurations.
+**⚠️Warning: Never add secrets directly in your code.** Even if it's for quick
+testing, secrets in code can easily be committed accidentally.
 
-1. **Copy .envtemplate:** Duplicate the `.envtemplate` file to create a `.env` file locally.
+To securely manage sensitive information, we use `.env` files for
+environment-specific configuration and `.envtemplate` files as templates for
+these configurations.
 
-1. **Fill in Secrets:** Add environment-specific values (e.g., API keys, database credentials) to your `.env` file as needed. Ask the DevOps team about accessing the tool.
+1. **Copy .envtemplate:** Duplicate the `.envtemplate` file to create a `.env`
+   file locally.
 
-1. **Access Secrets in Code**: Use `load_dotenv()` to load values from `.env`, then access them with `os.getenv("NAME_OF_SECRET")`.
+1. **Fill in Secrets:** Add environment-specific values (e.g., API keys,
+   database credentials) to your `.env` file as needed. Ask the DevOps team
+   about accessing the tool.
 
-1. **Protect .env**: Ensure `.env` is listed in `.gitignore` to prevent it from being committed to version control.
+1. **Access Secrets in Code**: Use `load_dotenv()` to load values from `.env`,
+   then access them with `os.getenv("NAME_OF_SECRET")`.
+
+1. **Protect .env**: Ensure `.env` is listed in `.gitignore` to prevent it from
+   being committed to version control.
 
 ### Editor settings
 
@@ -53,7 +68,8 @@ turned on:
 ## Using GitHub Issues
 
 1. Go to the organization's GitHub repository.
-2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a project to see all its issues.
+2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a
+   project to see all its issues.
 3. Create a new issue and assign it to a specific developer. Make sure to:
    - give the issue meaningful title and description
    - assign it the appropriate labels
@@ -62,7 +78,8 @@ turned on:
 ## Working with GitHub Projects
 
 1. Open the organization's GitHub repository.
-2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a project to view its board.
+2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a
+   project to view its board.
 3. **Issue Prioritization**: The tasks can be reordered in the table by dragging
    their priority number up or down. The higher up a task is, the more urgent it
    is.
@@ -79,7 +96,10 @@ turned on:
   whole team)
 
 ## Creating a new repository in the Organization
-Refer to the [GitHub Repository Creation Guide](https://github.com/ai-cfia/devops/blob/main/github-repository-creation-guide.md) in the DevOps repository for information.
+
+Refer to the [GitHub Repository Creation
+Guide](https://github.com/ai-cfia/devops/blob/main/github-repository-creation-guide.md)
+in the DevOps repository for information.
 
 ## Filing an Issue/ticket
 
