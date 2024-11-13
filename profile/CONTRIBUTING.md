@@ -1,8 +1,8 @@
 # Contributing to the CFIA AI Lab
 
-- [What this is](#what-this-is)
+- [Overview](#overview)
 - [Development Practices](#development-practices)
-  - [Managing Secrets with .env and .envtemplate](#managing-secrets)
+  - [Managing Secrets](#managing-secrets)
   - [Editor settings](#editor-settings)
 - [Using GitHub Issues](#using-github-issues)
 - [Working with GitHub Projects](#working-with-github-projects)
@@ -137,7 +137,7 @@ You should also include relevant reviewers even if they are absent or on
 vacation so they can catch up when they come back. Their approval is not
 required in the meantime to complete the PR.
 
-## Reviewing and Approving a Pull Request (PR)
+## Reviewing and Approving a Pull Request
 
 1. Team members review the pull request, leave comments, and suggest changes if
    necessary.
