@@ -1,20 +1,59 @@
 # Contributing to the CFIA AI Lab
 
-## What this is
+- [What this is](#what-this-is)
+- [Development Practices](#development-practices)
+  - [Managing Secrets with .env and .envtemplate](#managing-secrets)
+  - [Editor settings](#editor-settings)
+- [Using GitHub Issues](#using-github-issues)
+- [Working with GitHub Projects](#working-with-github-projects)
+- [Creating a new repository in the Organization](#creating-a-new-repository-in-the-organization)
+- [Filing an Issue/ticket](#filing-an-issueticket)
+- [Creating a Pull Request](#creating-a-pull-request)
+- [Working on a Pull Request](#working-on-a-pull-request)
+- [Submit for review](#submit-for-review)
+- [Reviewing and Approving a Pull Request (PR)](#reviewing-and-approving-a-pull-request-pr)
+- [Closing Pull Requests](#closing-pull-requests)
+- [GitHub development processes](#github-development-processes)
+  - [Handling divergent branches](#handling-divergent-branches)
+    - [Configuring Git for Automatic Rebase](#configuring-git-for-automatic-rebase)
+    - [Rebase with VScode GitHub extension](#rebase-with-vscode-github-extension)
 
-This guide provides an overview of the GitHub workflow using GitHub issues,
-GitHub projects, GitHub pull requests, reviews, and closing issues from pull
-requests.
 
-## Examples
+## Overview
 
-This documentation uses product codename Louis as the example.
+This guide details the CFIA AI Lab’s development practices and GitHub workflow, covering Issues, Projects, Pull Requests, and code reviews to ensure efficient, collaborative, and high-quality development.
+
+## Development Practices
+
+### Managing Secrets
+**⚠️Warning: Never add secrets directly in your code.** Even if it's for quick testing, secrets in code can easily be committed accidentally.
+
+To securely manage sensitive information, we use `.env` files for environment-specific configuration and `.envtemplate` files as templates for these configurations.
+
+1. **Copy .envtemplate:** Duplicate the `.envtemplate` file to create a `.env` file locally.
+
+1. **Fill in Secrets:** Add environment-specific values (e.g., API keys, database credentials) to your `.env` file as needed. Ask the DevOps team about accessing the tool.
+
+1. **Access Secrets in Code**: Use `load_dotenv()` to load values from `.env`, then access them with `os.getenv("NAME_OF_SECRET")`.
+
+1. **Protect .env**: Ensure `.env` is listed in `.gitignore` to prevent it from being committed to version control.
+
+### Editor settings
+
+Ensure that your editor (preferably in project workspaces) has the following
+turned on:
+
+- Automatically wrap lines to 80 characters in Markdown files
+  - use Rewrap extension
+- Trim Final Newlines: Ensures your files end neatly with a single newline.
+- Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of
+  lines upon file save.
+- Insert Final Newline: Add EOF new line when saving.
 
 ## Using GitHub Issues
 
 1. Go to the organization's GitHub repository.
-2. Click on **Projects** and select **Louis** to see all issues within the Louis
-   project.
+2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a project to see all its issues.
 3. Create a new issue and assign it to a specific developer. Make sure to:
    - give the issue meaningful title and description
    - assign it the appropriate labels
@@ -23,8 +62,7 @@ This documentation uses product codename Louis as the example.
 ## Working with GitHub Projects
 
 1. Open the organization's GitHub repository.
-2. Click on **Projects** and select a project. For instance **Louis** to view
-   the Louis project board.
+2. Click on [Projects](https://github.com/orgs/ai-cfia/projects) and select a project to view its board.
 3. **Issue Prioritization**: The tasks can be reordered in the table by dragging
    their priority number up or down. The higher up a task is, the more urgent it
    is.
@@ -41,17 +79,9 @@ This documentation uses product codename Louis as the example.
   whole team)
 
 ## Creating a new repository in the Organization
+Refer to the [GitHub Repository Creation Guide](https://github.com/ai-cfia/devops/blob/main/github-repository-creation-guide.md) in the DevOps repository for information.
 
-1. In the Organization's page, select `New` in the `Repositories` section.
-2. Give it a meaningful name, making sure to follow the existent repositories
-   naming patterns (i.e., lowercase, dash instead of underscore, …)
-3. Give it a meaningful description.
-4. Make it Public.
-5. Include README and .gitignore files.
-6. Once created, protect the main branch: check options `Require a pull request
-   before merging` and `Require approvals`.
-
-## filing an issue/ticket
+## Filing an Issue/ticket
 
 A good issue:
 
@@ -93,7 +123,7 @@ context and enhance clarity.
 
 ![Re-review](../img/re-review.png)
 
-## Working on a pull request
+## Working on a Pull Request
 
 Push and share your code early and often. When you share early code still under
 development, prefix your PR with WIP (meaning Work-in-Progress) so that
@@ -137,21 +167,9 @@ For more detailed information and specific steps, please refer to the GitHub
 documentation or reach out to your team for any additional guidelines or
 conventions.
 
-## Editor settings
-
-Ensure that your editor (preferably in project workspaces) has the following
-turned on:
-
-- Automatically wrap lines to 80 characters in Markdown files
-  - use Rewrap extension
-- Trim Final Newlines: Ensures your files end neatly with a single newline.
-- Trim Trailing Whitespace: Eliminates any superfluous spaces at the end of
-  lines upon file save.
-- Insert Final Newline: Add EOF new line when saving
-
 [see this repository .vscode/settings.json as example](../.vscode/settings.json)
 
-## Development processes
+## GitHub development processes
 
 - check your [Github organization](https://github.com/ai-cfia)
   [notifications](https://github.com/notifications) twice daily.
