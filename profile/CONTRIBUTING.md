@@ -12,8 +12,8 @@
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Working on a Pull Request](#working-on-a-pull-request)
 - [Submit for review](#submit-for-review)
-- [Reviewing and Approving a Pull Request
-  (PR)](#reviewing-and-approving-a-pull-request-pr)
+- [Reviewing and Approving a Pull
+  Request](#reviewing-and-approving-a-pull-request)
 - [Closing Pull Requests](#closing-pull-requests)
 - [GitHub development processes](#github-development-processes)
   - [Handling divergent branches](#handling-divergent-branches)
@@ -21,7 +21,6 @@
       Rebase](#configuring-git-for-automatic-rebase)
     - [Rebase with VScode GitHub
       extension](#rebase-with-vscode-github-extension)
-
 
 ## Overview
 
