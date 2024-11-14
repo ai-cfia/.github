@@ -36,10 +36,10 @@ collaborative, and high-quality development.
 testing, secrets in code can easily be committed accidentally.
 
 To securely manage sensitive information, we use `.env` files for
-environment-specific configuration and `.envtemplate` files as templates for
+environment-specific configuration and `.env.template` files as templates for
 these configurations.
 
-1. **Copy .envtemplate:** Duplicate the `.envtemplate` file to create a `.env`
+1. **Copy .envtemplate:** Duplicate the `.env.template` file to create a `.env`
    file locally.
 
 1. **Fill in Secrets:** Add environment-specific values (e.g., API keys,
