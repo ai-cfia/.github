@@ -39,12 +39,12 @@ To securely manage sensitive information, we use `.env` files for
 environment-specific configuration and `.env.template` files as templates for
 these configurations.
 
-1. **Copy .envtemplate:** Duplicate the `.env.template` file to create a `.env`
+1. **Copy .env.template:** Duplicate the `.env.template` file to create a `.env`
    file locally.
 
 1. **Fill in Secrets:** Add environment-specific values (e.g., API keys,
    database credentials) to your `.env` file as needed. Ask the DevOps team
-   about accessing the tool.
+   about accessing Vault, our secrets management tool, to retrieve them.
 
 1. **Access Secrets in Code**: Use `load_dotenv()` to load values from `.env`,
    then access them with `os.getenv("NAME_OF_SECRET")`.
