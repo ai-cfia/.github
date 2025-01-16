@@ -20,6 +20,7 @@ page*](#contribuer-au-labo-dia-de-lacia))
 - [Closing Pull Requests](#closing-pull-requests)
 - [GitHub development processes](#github-development-processes)
   - [Handling divergent branches](#handling-divergent-branches)
+    - [Steps to manually Rebase and Merge](#steps-to-manually-rebase-and-merge)
     - [Configuring Git for Automatic
       Rebase](#configuring-git-for-automatic-rebase)
     - [Rebase with VScode GitHub
@@ -235,7 +236,7 @@ A, B, C, D are commits on the main branch, and E, F, G are your commits on the
 branch. C and D are new commits added to the main branch after you created your
 branch.
 
-Steps to manually Rebase and Merge
+#### Steps to manually Rebase and Merge
 
 1.Fetch Latest main branch:
 
@@ -314,6 +315,7 @@ git config --global pull.rebase true
 - [Fermer les Pull Requests](#fermer-les-pull-requests)
 - [Processus de développement GitHub](#processus-de-développement-github)
   - [Gérer les branches divergentes](#gérer-les-branches-divergentes)
+    - [Étapes pour rebaser et fusionner manuellement](#étapes-pour-rebaser-et-fusionner-manuellement)
     - [Configurer Git pour le Rebase
       automatique](#configurer-git-pour-le-rebase-automatique)
     - [Rebase avec l'extension GitHub pour
@@ -536,29 +538,29 @@ A, B, C, D sont des commits sur la branche principale, et E, F, G sont vos
 commits sur votre branche. C et D sont de nouveaux commits ajoutés à la branche
 principale après la création de votre branche.
 
-**Étapes pour rebaser et fusionner manuellement**
+#### Étapes pour rebaser et fusionner manuellement
 
 1. Récupérez la dernière version de la branche principale :
 
-```sh
-git fetch origin main
-```
+  ```sh
+  git fetch origin main
+  ```
 
 2. Rebasez votre branche :
 
 Lancez le processus de rebase pour mettre les modifications de votre branche (E,
 F, G) sur l'état actuel de la branche principale (D).
 
-```sh
-git rebase origin/main
-```
+  ```sh
+  git rebase origin/main
+  ```
 
 3. Résolvez les conflits (le cas échéant) :
 
-```sh
-git add <file>
-git rebase --continue
-```
+  ```sh
+  git add <file>
+  git rebase --continue
+  ```
 
 Répétez jusqu'à ce que tous les conflits soient résolus et que le rebase soit
 terminé.
@@ -568,9 +570,9 @@ terminé.
 Comme le rebase réécrit l'historique, vous devrez forcer le push de votre
 branche.
 
-```sh
-git push --force-with-lease
-```
+  ```sh
+  git push --force-with-lease
+  ```
 
 Ce processus garantit que vos modifications maintiennent un historique
 linéaire :
