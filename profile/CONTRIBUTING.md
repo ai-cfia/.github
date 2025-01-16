@@ -315,7 +315,8 @@ git config --global pull.rebase true
 - [Fermer les Pull Requests](#fermer-les-pull-requests)
 - [Processus de développement GitHub](#processus-de-développement-github)
   - [Gérer les branches divergentes](#gérer-les-branches-divergentes)
-    - [Étapes pour rebaser et fusionner manuellement](#étapes-pour-rebaser-et-fusionner-manuellement)
+    - [Étapes pour rebaser et fusionner
+      manuellement](#étapes-pour-rebaser-et-fusionner-manuellement)
     - [Configurer Git pour le Rebase
       automatique](#configurer-git-pour-le-rebase-automatique)
     - [Rebase avec l'extension GitHub pour
@@ -542,46 +543,46 @@ principale après la création de votre branche.
 
 1. Récupérez la dernière version de la branche principale :
 
-  ```sh
-  git fetch origin main
-  ```
+    ```sh
+    git fetch origin main
+    ```
 
-2. Rebasez votre branche :
+1. Rebasez votre branche :
 
-Lancez le processus de rebase pour mettre les modifications de votre branche (E,
-F, G) sur l'état actuel de la branche principale (D).
+    Lancez le processus de rebase pour mettre les modifications de votre branche
+    (E, F, G) sur l'état actuel de la branche principale (D).
 
-  ```sh
-  git rebase origin/main
-  ```
+    ```sh
+    git rebase origin/main
+    ```
 
-3. Résolvez les conflits (le cas échéant) :
+1. Résolvez les conflits (le cas échéant) :
 
-  ```sh
-  git add <file>
-  git rebase --continue
-  ```
+    ```sh
+    git add <file>
+    git rebase --continue
+    ```
 
-Répétez jusqu'à ce que tous les conflits soient résolus et que le rebase soit
-terminé.
+    Répétez jusqu'à ce que tous les conflits soient résolus et que le rebase
+    soit terminé.
 
-4. Pousser les modifications :
+1. Pousser les modifications :
 
-Comme le rebase réécrit l'historique, vous devrez forcer le push de votre
-branche.
+    Comme le rebase réécrit l'historique, vous devrez forcer le push de votre
+    branche.
 
-  ```sh
-  git push --force-with-lease
-  ```
+    ```sh
+    git push --force-with-lease
+    ```
 
-Ce processus garantit que vos modifications maintiennent un historique
-linéaire :
+    Ce processus garantit que vos modifications maintiennent un historique
+    linéaire :
 
-```ascii
-main      A---B---C---D
-                        \
-branch                   E'---F'---G' (rebased)
-```
+    ```ascii
+    main      A---B---C---D
+                            \
+    branch                   E'---F'---G' (rebased)
+    ```
 
 #### Configurer Git pour le Rebase automatique
 
