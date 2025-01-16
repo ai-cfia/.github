@@ -330,7 +330,8 @@ code pour garantir un développement collaboratif, efficace et de haute qualité
 ### Gestion des secrets
 
 **⚠️ Avertissement : Ne jamais ajouter de secrets directement dans votre code.**
-Même pour des tests rapides, des secrets dans le code peuvent être accidentellement ajoutés au dépôt.
+Même pour des tests rapides, des secrets dans le code peuvent être
+accidentellement ajoutés au dépôt.
 
 Pour gérer les informations sensibles en toute sécurité, nous utilisons des
 fichiers `.env` pour la configuration spécifique à l'environnement et des
@@ -447,15 +448,18 @@ Partagez votre code fréquemment. Préfixez les PR en cours par WIP
 
 ## Soumettre pour révision
 
-Sélectionnez les membres d'équipe pertinents, y compris le ou la responsable d'équipe.
+Sélectionnez les membres d'équipe pertinents, y compris le ou la responsable
+d'équipe.
 
-Ajoutez les absent(e)s pour qu'ils puissent suivre à leur
-retour. Leur approbation n'est pas obligatoire en attendant.
+Ajoutez les absent(e)s pour qu'ils puissent suivre à leur retour. Leur
+approbation n'est pas obligatoire en attendant.
 
 ## Réviser et approuver une Pull Request
 
 1. Les membres de l'équipe examinent la PR et laissent des commentaires.
-2. Le développeur ou la développeuse ajuste le code en fonction des retours, répond aux commentaires et peut ouvrir de nouvelles issues pour différer les tâches non critiques.
+2. Le développeur ou la développeuse ajuste le code en fonction des retours,
+   répond aux commentaires et peut ouvrir de nouvelles issues pour différer les
+   tâches non critiques.
 3. Une fois la PR conforme, un(e) membre l'approuve.
 
 ## Fermer les Pull Requests
@@ -511,7 +515,8 @@ dépôt](../.vscode/settings.json)
 - Ne supprimez pas les branches après leur fusion (gardez-les pour référence
   ultérieure).
 - Lorsqu'il y a des suggestions, des retours ou des demandes de fonctionnalités
-  apparaissent dans une PR et nécessitent un travail supplémentaire en dehors de la portée de l'issue actuelle, créez une nouvelle issue pour capturer ce
+  apparaissent dans une PR et nécessitent un travail supplémentaire en dehors de
+  la portée de l'issue actuelle, créez une nouvelle issue pour capturer ce
   travail non trivial et documentez-le comme "travail reporté" dans la PR.
 
 ### Gérer les branches divergentes
