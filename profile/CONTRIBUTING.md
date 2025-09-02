@@ -1,5 +1,8 @@
 # Contributing to the CFIA AI Lab
 
+([*Le français est disponible au bas de la
+page*](#contribuer-au-labo-dia-de-lacia))
+
 - [Overview](#overview)
 - [Development Practices](#development-practices)
   - [Managing Secrets](#managing-secrets)
@@ -17,6 +20,7 @@
 - [Closing Pull Requests](#closing-pull-requests)
 - [GitHub development processes](#github-development-processes)
   - [Handling divergent branches](#handling-divergent-branches)
+    - [Steps to manually Rebase and Merge](#steps-to-manually-rebase-and-merge)
     - [Configuring Git for Automatic
       Rebase](#configuring-git-for-automatic-rebase)
     - [Rebase with VScode GitHub
@@ -232,7 +236,7 @@ A, B, C, D are commits on the main branch, and E, F, G are your commits on the
 branch. C and D are new commits added to the main branch after you created your
 branch.
 
-Steps to manually Rebase and Merge
+#### Steps to manually Rebase and Merge
 
 1.Fetch Latest main branch:
 
@@ -289,3 +293,310 @@ git config --global pull.rebase true
 2. Search for "Rebase" and select "Git: Pull (Rebase)"
 3. Select the branch you want to rebase onto the main branch
 4. Resolve any conflicts and push your changes
+
+---
+
+## Contribuer au Labo d'IA de l'ACIA
+
+- [Vue d'ensemble](#vue-densemble)
+- [Pratiques de développement](#pratiques-de-développement)
+  - [Gestion des secrets](#gestion-des-secrets)
+  - [Paramètres de l'éditeur](#paramètres-de-léditeur)
+- [Utiliser les Issues GitHub](#utiliser-les-issues-github)
+- [Travailler avec les Projets GitHub](#travailler-avec-les-projets-github)
+- [Créer un nouveau dépôt dans
+  l'organisation](#créer-un-nouveau-dépôt-dans-lorganisation)
+- [Créer une Issue/Ticket](#créer-une-issueticket)
+- [Créer une Pull Request](#créer-une-pull-request)
+- [Travailler sur une Pull Request](#travailler-sur-une-pull-request)
+- [Soumettre pour révision](#soumettre-pour-révision)
+- [Réviser et approuver une Pull
+  Request](#réviser-et-approuver-une-pull-request)
+- [Fermer les Pull Requests](#fermer-les-pull-requests)
+- [Processus de développement GitHub](#processus-de-développement-github)
+  - [Gérer les branches divergentes](#gérer-les-branches-divergentes)
+    - [Étapes pour rebaser et fusionner
+      manuellement](#étapes-pour-rebaser-et-fusionner-manuellement)
+    - [Configurer Git pour le Rebase
+      automatique](#configurer-git-pour-le-rebase-automatique)
+    - [Rebase avec l'extension GitHub pour
+      VScode](#rebase-avec-lextension-github-pour-vscode)
+
+## Vue d'ensemble
+
+Ce guide détaille les pratiques de développement du Labo d'IA de l'ACIA et le
+workflow GitHub, couvrant les Issues, Projets, Pull Requests et les revues de
+code pour garantir un développement collaboratif, efficace et de haute qualité.
+
+## Pratiques de développement
+
+### Gestion des secrets
+
+**⚠️ Avertissement : Ne jamais ajouter de secrets directement dans votre code.**
+Même pour des tests rapides, des secrets dans le code peuvent être
+accidentellement ajoutés au dépôt.
+
+Pour gérer les informations sensibles en toute sécurité, nous utilisons des
+fichiers `.env` pour la configuration spécifique à l'environnement et des
+fichiers `.env.template` comme modèles.
+
+1. **Copiez `.env.template` :** Dupliquez le fichier `.env.template` pour créer
+   un fichier `.env` localement.
+
+2. **Remplissez les secrets :** Ajoutez les valeurs spécifiques à
+   l'environnement (ex. : clés API, identifiants de base de données) dans votre
+   fichier `.env`. Consultez l'équipe DevOps pour accéder à Vault, notre outil
+   de gestion des secrets.
+
+3. **Accès aux secrets dans le code :** Utilisez `load_dotenv()` pour charger
+   les valeurs depuis `.env`, puis accédez-y avec `os.getenv("NOM_DU_SECRET")`.
+
+4. **Protégez `.env` :** Assurez-vous que `.env` est listé dans `.gitignore`
+   pour éviter qu'il ne soit ajouté au dépôt.
+
+### Paramètres de l'éditeur
+
+Assurez-vous que votre éditeur (de préférence dans les espaces de travail des
+projets) a les options suivantes activées :
+
+- Enroulement automatique des lignes à 80 caractères dans les fichiers Markdown
+  - Utilisez l'extension Rewrap
+- Suppression des nouvelles lignes finales superflues : Garantit que vos
+  fichiers se terminent proprement par une seule nouvelle ligne.
+- Suppression des espaces inutiles : Élimine les espaces superflus à la fin des
+  lignes lors de l'enregistrement des fichiers.
+- Ajout d'une nouvelle ligne finale : Ajoute une nouvelle ligne EOF (End Of
+  File) lors de l'enregistrement.
+
+## Utiliser les Issues GitHub
+
+1. Accédez au dépôt GitHub de l'organisation.
+2. Cliquez sur [Projets](https://github.com/orgs/ai-cfia/projects) et
+   sélectionnez un projet pour voir ses Issues.
+3. Créez une nouvelle Issue en lui assignant un(e) développeur(euse) spécifique.
+   Assurez-vous de :
+   - Donner un titre et une description significatifs.
+   - Lui assigner des labels appropriés.
+   - Ne pas créer de nouveaux labels au niveau du dépôt.
+
+## Travailler avec les Projets GitHub
+
+1. Ouvrez le dépôt GitHub de l'organisation.
+2. Cliquez sur [Projets](https://github.com/orgs/ai-cfia/projects) et
+   sélectionnez un projet pour afficher son tableau.
+3. **Priorisation des tâches** : Réorganisez les tâches selon leur priorité.
+4. **Assignation** : Dans la colonne `Assignees`, choisissez un(e) responsable.
+5. **Statut** : Mettez à jour l'avancement dans la colonne `status`.
+
+**Notes :**
+
+- Si le dépôt particulier sur lequel vous travaillez n'a pas de projet GitHub,
+  créez-en un avec l'autorisation de votre superviseur(euse). Suivez ce
+  [guide](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects).
+- N'assignez pas d'issues avant qu'elles ne soient priorisées (par votre
+  superviseur(euse) ou toute l'équipe).
+
+## Créer un nouveau dépôt dans l'organisation
+
+Consultez le [Guide de création de dépôt
+GitHub](https://github.com/ai-cfia/devops/blob/main/github-repository-creation-guide.md)
+dans le dépôt DevOps.
+
+## Créer une Issue/Ticket
+
+Une bonne issue doit inclure :
+
+- Un titre descriptif et compréhensible.
+- Un résumé complet fournissant le contexte.
+- Des descriptions détaillées (étape par étape) du travail à réaliser.
+- Des critères d'acceptation clairement définis.
+- Une liste de tâches correctement associée à un projet.
+- L'inclusion de liens et de diagrammes (comme des diagrammes de séquence) pour
+  clarifier davantage le travail.
+- Des informations sur la version et l'environnement testés, ainsi que des
+  étapes de reproduction pour les bugs signalés.
+- Pour les applications web, l'utilisation du panneau d'outils développeur du
+  navigateur.
+- L'utilisation de texte, captures d'écran, journaux d'application et journaux
+  de console pour transmettre les informations.
+- Une explication des causes profondes du problème.
+
+De plus, les issues doivent être de taille appropriée, en évitant le refactoring
+ou les corrections mineures qui pourraient être ajoutées comme tâches à des
+issues existantes. Lors de la création d'une issue en tant que suivi d'un
+commentaire dans une autre issue ou pull request, utilisez la fonctionnalité
+"Référencer dans une nouvelle issue" de GitHub (disponible dans le menu ...)
+pour fournir un contexte et améliorer la clarté.
+
+## Créer une Pull Request
+
+1. Référencez l'issue que cette PR ferme dans la description.
+2. Planifiez le travail requis sous forme de checklist :
+   - Rendre fonctionnel en premier.
+   - Refactorisation.
+   - Documentation de l'utilisation et de l'architecture.
+   - Tests manuels (mise à jour de TESTING.md).
+   - Tests automatisés.
+   - Mise à jour de version (_versions.ts dans les projets frontend).
+3. Marquez la PR comme brouillon.
+4. Effectuez les modifications nécessaires.
+5. Demandez une relecture une fois terminé.
+
+![Re-review](../img/re-review.png)
+
+## Travailler sur une Pull Request
+
+Partagez votre code fréquemment. Préfixez les PR en cours par WIP
+(Work-in-Progress) pour indiquer qu'il s'agit d'une version en développement.
+
+## Soumettre pour révision
+
+Sélectionnez les membres d'équipe pertinents, y compris le ou la responsable
+d'équipe.
+
+Ajoutez les absent(e)s pour qu'ils puissent suivre à leur retour. Leur
+approbation n'est pas obligatoire en attendant.
+
+## Réviser et approuver une Pull Request
+
+1. Les membres de l'équipe examinent la PR et laissent des commentaires.
+2. Le développeur ou la développeuse ajuste le code en fonction des retours,
+   répond aux commentaires et peut ouvrir de nouvelles issues pour différer les
+   tâches non critiques.
+3. Une fois la PR conforme, un(e) membre l'approuve.
+
+## Fermer les Pull Requests
+
+1. Une fois que la pull request est approuvée, accédez à sa description.
+2. Mettez à jour la description en ajoutant le texte `Closes #<numéro de
+   l'issue>` pour indiquer que l'issue a été traitée et complétée.
+3. Envisagez de rebaser et de fusionner les commits pour nettoyer l'historique.
+4. Fusionnez la pull request dans la branche principale. Si vous avez un conflit
+   de fusion avec une branche divergente, consultez la
+   [section](#gérer-les-branches-divergentes).
+
+5. Ne supprimez pas la branche après la fusion (gardez-la pour une référence
+   future).
+
+En suivant ce workflow, vous pourrez gérer les tâches, suivre les progrès et
+clôturer les issues efficacement en utilisant les fonctionnalités de GitHub.
+
+Pour des informations plus détaillées et des étapes spécifiques, veuillez
+consulter la documentation GitHub ou contacter votre équipe pour toute directive
+ou convention supplémentaire.
+
+[Consultez cet exemple de fichier `.vscode/settings.json` dans ce
+dépôt](../.vscode/settings.json)
+
+## Processus de développement GitHub
+
+- Consultez vos [notifications GitHub](https://github.com/notifications) deux
+  fois par jour.
+  - Personnalisez le routage des e-mails pour acheminer les notifications des
+    dépôts ai-cfia vers votre adresse inspection.gc.ca.
+  - Priorisez les revues de pull requests avant toute autre tâche.
+  - Ne validez pas sans examiner ; apportez une réelle valeur en tant que
+    réviseur(e).
+- Chaque tâche doit avoir une issue correspondante décrivant le travail à
+  effectuer.
+- Workflow des pull requests :
+  - branche -> pull request -> revue par les pairs -> corrections -> approbation
+    -> rebase et fusion.
+  - Préfixez les noms de branche avec l'identifiant de l'issue
+    (```59-some-issue-summary```).
+  - Référencez l'issue dans la description de la pull request.
+  - Faites autant de revues que nécessaire -> recevez des commentaires du
+    relecteur -> corrigez et répondez aux commentaires -> demandez de nouvelles
+    revues jusqu'à obtention de l'approbation.
+- Mettez à jour vos [paramètres de notifications GitHub avec le routage
+  personnalisé](https://github.com/settings/notifications/custom_routing) pour
+  acheminer les notifications de l'organisation ai-cfia vers votre adresse
+  inspection.gc.ca.
+- Préférez les commits d'une seule ligne, préfixés par l'issue sur laquelle vous
+  travaillez.
+  - Exemple : `Issue #19: Introduction Jolan Thomassin`.
+- Ne supprimez pas les branches après leur fusion (gardez-les pour référence
+  ultérieure).
+- Lorsqu'il y a des suggestions, des retours ou des demandes de fonctionnalités
+  apparaissent dans une PR et nécessitent un travail supplémentaire en dehors de
+  la portée de l'issue actuelle, créez une nouvelle issue pour capturer ce
+  travail non trivial et documentez-le comme "travail reporté" dans la PR.
+
+### Gérer les branches divergentes
+
+Lorsque votre branche diverge de la branche principale (en raison de mises à
+jour sur la branche principale pendant que vous travaillez sur votre branche),
+suivez ces étapes pour rebaser votre branche sur la branche principale. Cela
+garantit que l'historique du projet reste propre et linéaire.
+
+```ascii
+main      A---B---C---D
+               \
+branch          E---F---G (divergent)
+```
+
+A, B, C, D sont des commits sur la branche principale, et E, F, G sont vos
+commits sur votre branche. C et D sont de nouveaux commits ajoutés à la branche
+principale après la création de votre branche.
+
+#### Étapes pour rebaser et fusionner manuellement
+
+1. Récupérez la dernière version de la branche principale :
+
+    ```sh
+    git fetch origin main
+    ```
+
+1. Rebasez votre branche :
+
+    Lancez le processus de rebase pour mettre les modifications de votre branche
+    (E, F, G) sur l'état actuel de la branche principale (D).
+
+    ```sh
+    git rebase origin/main
+    ```
+
+1. Résolvez les conflits (le cas échéant) :
+
+    ```sh
+    git add <file>
+    git rebase --continue
+    ```
+
+    Répétez jusqu'à ce que tous les conflits soient résolus et que le rebase
+    soit terminé.
+
+1. Pousser les modifications :
+
+    Comme le rebase réécrit l'historique, vous devrez forcer le push de votre
+    branche.
+
+    ```sh
+    git push --force-with-lease
+    ```
+
+    Ce processus garantit que vos modifications maintiennent un historique
+    linéaire :
+
+    ```ascii
+    main      A---B---C---D
+                            \
+    branch                   E'---F'---G' (rebased)
+    ```
+
+#### Configurer Git pour le Rebase automatique
+
+Pour configurer Git afin d'effectuer automatiquement un rebase au lieu de créer
+des commits de fusion lors d'un `git pull`, utilisez la commande de
+configuration globale suivante :
+
+```sh
+git config --global pull.rebase true
+```
+
+#### Rebase avec l'extension GitHub pour VScode
+
+1. Ouvrez la palette de commandes (Ctrl+Shift+P).
+2. Recherchez "Rebase" et sélectionnez "Git : Pull (Rebase)".
+3. Sélectionnez la branche que vous souhaitez rebaser sur la branche principale.
+4. Résolvez les conflits, le cas échéant, et poussez vos modifications.
